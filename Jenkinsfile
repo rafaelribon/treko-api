@@ -13,7 +13,7 @@ pipeline {
           sh "apk update"
           sh "apk add mongodb=4.0.5-r0"
           sh "chmod +x ./scripts/dropdb.sh"
-          sh "npm install
+          sh "npm install"
       }
     }
     stage("Test"){
