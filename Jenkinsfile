@@ -7,7 +7,7 @@ pipeline {
   }
   stages{
     stage("Build"){
-      step"
+      steps{
         sh "echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/main' >> /etc/apk/repositories"
         sh "echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/community' >> /etc/apk/repositories"
         sh "apk update"
@@ -22,4 +22,3 @@ pipeline {
       }
     }
   }
-}
