@@ -8,8 +8,8 @@ pipeline {
   stages{
     stage("Build"){
       steps{
-          sh "echo 'http://dl-cdn.alpinelinux.org/alpine/v3.11/main' >> /etc/apk/repositories"
-          sh "echo 'http://dl-cdn.alpinelinux.org/alpine/v3.11/community' >> /etc/apk/repositories"
+          sh "echo 'http://dl-cdn.alpinelinux.org/alpine/v3.0.7/main' >> /etc/apk/repositories"
+          sh "echo 'http://dl-cdn.alpinelinux.org/alpine/v3.0.7/community' >> /etc/apk/repositories"
           sh "apk add --no-cache mongodb"
           sh "chmod +x ./scripts/dropdb.sh"
           sh "npm install"
