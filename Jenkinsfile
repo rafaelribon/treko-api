@@ -14,6 +14,8 @@ pipeline {
         sh "apk add mongodb yaml-cpp=0.6.2-r2"
         sh "chmod +x ./scripts/dropdb.sh"
         sh "npm install"
+        sh "npm i mocha-junit-reporter"
+        
        }
      }
 
